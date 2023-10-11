@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Photo Bum Photo Gallery Category Flat Bootstrap Responsive Website Template | Contact : W3layouts</title>
+<title>The Social Paint Pallete</title>
 	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,25 +61,11 @@
 							</a>
 						</li>
 						<li class="nav-item  mr-1">
-							<a class="nav-link" href="about.html">about</a>
+							<a class="nav-link" href="gallery.html">Gallery</a>
 						</li>
-						<li class="nav-item dropdown mr-1">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								Dropdown
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="services.html">Services</a>
-								<a class="dropdown-item" href="gallery.html">Gallery</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="error.html">404</a>
-							</div>
-						</li>
-						<li class="nav-item active mr-1">
-							<a class="nav-link" href="contact.html">contact</a>
-						</li>
+					
 						<li>
-							<a href="booking.html" class="w3ls-btn"> Book Shoot </a>
+							<a href="contact.html" class="w3ls-btn"> Book Shoot </a>
 						</li>
 					</ul>
 				</div>
@@ -109,22 +95,22 @@
 				<div class="col-lg-6 w3layouts_mail_grid_left">
 					<div class="agileits_mail_grid_left">
 						<h3>Contact Details</h3>
-						<p class="mb-sm-5 mb-3"> Phasellus iaculis sapien in tellus gravida, lorem placerat in amet lacus elementum. Nulla vitae lacus nec elit mollis pretium. Sed sed nunc lectus. </p>
+						<p class="mb-sm-5 mb-3">Book your birthday party, family get together’s, bridal showers, baby shower’s or just friend’s having fun with The Social Paint Pallete. Contact Premona for your bookings.</p>
 						<ul>
-							<li><label><i class="fas fa-map-marker" aria-hidden="true"></i></label>2891KH Block, Aichi Central, Island, Tokyo.</li>
-							<li><label><i class="fas fa-envelope" aria-hidden="true"></i></label><a href="mailto:info@example.com">mail@example.com</a>, <a href="mailto:info@example1.com">mail@example1.com</a></li>
-							<li><label><i class="fa fa-phone" aria-hidden="true"></i></label>+012 3456 3456, +012 3456 3457</li>
+							<li><label><i class="fas fa-map-marker" aria-hidden="true"></i></label>11 Chester Terrace, Westville, 3630</li>
+							<li><label><i class="fas fa-envelope" aria-hidden="true"></i></label><a href="mailto:premona_reddy@yahoo.com">mail@example.com</a>, <a href="mailto:info@example1.com">mail@example1.com</a></li>
+							<li><label><i class="fa fa-phone" aria-hidden="true"></i></label>079 833 9439</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-6 mt-lg-0 mt-5 wthree_mail_pos">
-					<form action="#" method="post">
+					<form onsubmit="sendEmail(); reset(); return false;">
 						<div class="w3_agileits_contact_left">
 							<h3>Get In Touch</h3>
-							<input type="text" name="Name" placeholder="Your Name" required="">
-							<input type="email" name="Email" placeholder="Your Email" required="">
-							<input type="text" name="Phone" placeholder="Phone Number" required="">
-							<textarea placeholder="Your Message..." required=""></textarea>
+							<input type="email" id="exampleInputEmail1" name="Email" placeholder="Your Email" required="">
+							<input type="text" id="subject" name="Subject" placeholder="Subject" required="">
+							<input type="text" name="Phone" id="Contact" placeholder="Phone Number" required="">
+							<textarea placeholder="Your Message..." id="Message" required=""></textarea>
 							<div class="w3_agileits_contact_right">
 								<input type="submit" value="SEND MESSAGE">
 							</div>
@@ -132,12 +118,30 @@
 						<div class="clearfix"> </div>
 					</form>
 				</div>
+				<script src="https://smtpjs.com/v3/smtp.js"></script>  
+				<script>
+					function sendEmail(){
+					  Email.send({
+					  Host : "smtp.elasticemail.com",
+					  Username : "shivekdhurumpall816@gmail.com",
+					  Password : "739F657B821BCFA19A5151EECF36B1E4C991",
+					  To : 'info@webzs.co.za',
+					  From : "shivekdhurumpall816@gmail.com",
+					  Subject : "Enquiry from : " +document.getElementById("exampleInputEmail1").value,
+					  Body : "Subject : " +document.getElementById("subject").value
+						   + "<br> Contact No: " + document.getElementById("Contact").value
+						   + "<br> Message: " + document.getElementById("Message").value
+						  }).then(
+					   message => alert(message)
+						  );
+					}
+				</script>  
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 	<div class="w3_agileits_map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409238.13468062127!2d34.24871928853258!3d36.7424200891376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f4a4c0be6e9f%3A0x4dbef2b1f81e7d77!2sMersin%2C+Mesudiye+Mahallesi%2C+Akdeniz%2FMersin+Province%2C+Turkey!5e0!3m2!1sen!2sin!4v1490868886492"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.1049488646217!2d30.93173721136069!3d-29.832392321371803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7005a4650db09%3A0xcaf7df71934b9b4e!2s11%20Chester%20Terrace%2C%20Westville%2C%203630!5e0!3m2!1sen!2sza!4v1697031271880!5m2!1sen!2sza" ></iframe>
 	</div>
 <!-- //mail -->
 
@@ -145,39 +149,21 @@
 <footer class="py-5">
 	<div class="container py-md-3">
 		<div class="row footer-grids">
-			<div class="col-lg-4 footer-grid-left mb-lg-0 mb-4">
-				<h2><a href="index.html"><i class="fab mr-2 fa-tripadvisor"></i>Photo bum</a></h2>
-				<p class="mt-3">Duis fringilla velit id ipsum dignissim init elementum. Curabitur fermentum libero acsit amet consectetur. </p>
-			</div>
-			<div class="col-lg-4 col-md-6 footer-grid-middle">
-				<h4>About photo bum</h4>
-				<p>Duis fringilla velit id ipsum dignissim init elementum. Curabitur fermentum libero acsit amet consectetur. Vestibulum non posuere sapien, eget feugiat quam. Sed eget sapien nunc. </p>
-			</div>
 			<div class="col-lg-4 col-md-6 subscribe-grid mt-md-0 mt-4">
-				<h4> Connect & subscribe </h4>
+				<h4> Connect With The Socials</h4>
 				<div class="social mb-4 text-center">
 					<ul class="d-flex justify-content-start">
-						<li class="mr-2"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-						<li class="mx-sm-2 mr-2"><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li class="mx-sm-2 mr-2"><a href="#"><span class="fas fa-rss"></span></a></li>
-						<li class="mx-sm-2 mr-2"><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-						<li class="mx-sm-2 mr-2"><a href="#"><span class="fab fa-google-plus"></span></a></li>
+						<li class="mr-2"><a href="https://www.facebook.com/TheSocialPaintPalette?mibextid=ZbWKwL"><span class="fab fa-facebook-f"></span></a></li>
+						<li class="mr-2"><a href="https://instagram.com/the_social_paint_pallete?igshid=OGQ5ZDc2ODk2ZA=="><span class="fab fa-instagram"></span></a></li>
 					</ul>
 				</div>
-				<form action="#" method="post">
-					<input class="form-control" type="email" placeholder="Subscribe" name="Subscribe" required="">
-					<button class="btn1">
-						<i class="far fa-paper-plane"></i>
-					</button>
-				</form>
 			</div>
 		</div>
 		<div class="copyright mt-5">
-			<p class="text-center">© 2018 Photo Bum. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
+			<p class="text-center">© 2023 The Social Paint Pallete All Rights Reserved | Design by S2000 CORP</p>
 		</div>
 	</div>
 </footer>
-<!-- //footer -->
 
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
